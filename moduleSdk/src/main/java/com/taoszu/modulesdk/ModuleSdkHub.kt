@@ -6,7 +6,6 @@ object ModuleSdkProviderHub {
 
     fun install(moduleClass:Class<out IModuleSdk>, moduleSdkProvider:IModuleSdk) {
         moduleSdkMap[moduleClass] = moduleSdkProvider
-`
         moduleSdkProvider.onDepend()
         moduleSdkProvider.onInstall()
     }
